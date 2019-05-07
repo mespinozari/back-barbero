@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registrar Barbero</title>
+    </head>
+     <h1>Registar Barbero</h1>
+     <form method="POST" name="registrarb" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Nombre</label>
+        <input type="text" name="nombre"><br>
+        <label>Fecha Registro</label>
+        <input type="text" name="fecha"><br>
+        <label>Descripcion</label>
+        <textarea name="descripcion" cols="20" rows="5"></textarea><br>
+        <input type="submit" value="Registrar">
+    </form>
+    {% if estado %}
+       <h2>GUARDADO EXITOSAMENTE</h2>
+    {% endif %}   
+</html>
